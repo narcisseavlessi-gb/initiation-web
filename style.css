@@ -1,0 +1,477 @@
+/* ===== RESET ET STYLES GÉNÉRAUX ===== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-size: 18px;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f8f9fa;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* ===== ZONE D'EN-TÊTE ===== */
+header {
+    background: linear-gradient(135deg, #2c3e50, #4a6491);
+    color: white;
+    padding: 2rem;
+    margin-bottom: 2rem;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.header-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.logo {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    border: 3px solid rgb(130, 130, 200);
+    padding: 5px;
+
+    /* animation au chargement */
+    animation: spin-load 1s ease-out;
+
+    /* animation au survol */
+    transition: transform 0.4s ease;
+}
+
+.logo:hover {
+    transform: rotate(360deg) scale(1.1);
+}
+
+/* animation de chargement */
+@keyframes spin-load {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+
+header h1 {
+    font-size: 2.2rem;
+    margin-bottom: 0.5rem;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
+}
+
+.subtitle {
+    font-size: 1.1rem;
+    opacity: 0.9;
+    font-style: italic;
+}
+
+/* ===== ZONE DE CONTENU PRINCIPAL ===== */
+main {
+    background-color: white;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+    margin-bottom: 2rem;
+}
+
+section {
+    margin-bottom: 2.5rem;
+}
+
+main section h2 {
+    text-align: center;
+}
+
+h2 {
+    color: #2c3e50;
+    border-bottom: 2px solid #4a6491;
+    padding-bottom: 0.5rem;
+    margin-bottom: 1.5rem;
+    font-size: 1.8rem;
+}
+
+h3 {
+    color: #34495e;
+    margin: 1rem 0;
+    font-size: 1.4rem;
+}
+
+p {
+    margin-bottom: 1rem;
+    text-align: justify;
+    font-size: 1.05rem;
+}
+
+strong {
+    color: #2c3e50;
+}
+
+/* ===== LISTE D'OBJECTIFS ===== */
+.objectives {
+    background-color: #dfebf7;
+    padding: 1.5rem;
+    border-radius: 8px;
+    border-left: 4px solid #4a6491;
+    margin: 1.5rem 0;
+    padding-top: 10px;
+
+}
+
+.objectives h3 {
+    text-align: center;
+}
+
+.objectives ul {
+    list-style-position: inside;
+    margin-left: 1rem;
+}
+
+.objectives li {
+    margin-bottom: 0.5rem;
+    padding-left: 0.5rem;
+}
+
+/* ===== LIEN EXTERNE ===== */
+.external-link {
+    background-color: #e8f4fc;
+    text-align: center;
+    padding: 1.5rem;
+    border-radius: 8px;
+    border: 1px solid #b3d9ff;
+    margin-top: 1rem;
+}
+
+.external-link a {
+    display: inline-block;
+    color: #0066cc;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.1rem;
+    padding: 0.8rem 1.5rem;
+    background-color: white;
+    border-radius: 30px;
+    border: 2px solid #0066cc;
+    transition: all 0.3s ease;
+}
+
+.external-link a:hover {
+    background-color: #0066cc;
+    color: white;
+    transform: translateY(-5px);
+    box-shadow: 5px 10px 5px rgba(0, 0, 0, 0.3);
+}
+
+.link-description {
+    text-align: center;
+    margin-top: 0.8rem;
+    font-size: 0.95rem;
+    color: #666;
+    font-style: italic;
+}
+
+.info {
+    padding-bottom: 17px;
+}
+
+/* ===== GRID DES TECHNOLOGIES ===== */
+.tech-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
+    margin-top: 1rem;
+}
+
+.tech-item {
+    background-color: #f0f7ff;
+    padding: 1.5rem;
+    border-radius: 8px;
+    border-top: 3px solid #4a6491;
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.tech-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(21, 20, 20, 0.1);
+}
+
+.tech-item h3 {
+    color: #2c3e50;
+    margin-bottom: 0.8rem;
+}
+
+.tech-item p {
+    text-align: center;
+}
+
+/* ===== TABLEAU HTML ===== */
+
+.tab table {
+  width: 100%;
+  border-collapse: collapse;
+  border: 1px solid #ddd;
+  font-family: Arial, sans-serif;
+}
+
+.tab caption {
+  font-size: 1.2em;
+  font-weight: bold;
+  text-align: left;
+}
+
+.tab th, .tab td {
+  padding: 10px;
+  text-align: center;
+  border: 1px solid #ddd;
+}
+
+.tab thead {
+  background-color: #f0f7ff;
+}
+
+.tab thead tr:first-child th {
+  background-color: #e6e6e6;
+  font-size: 1.1em;
+}
+
+.tab tbody tr:hover {
+  background-color: #f0f0f0;
+}
+
+.tab {
+    width: 100%;
+    overflow-x: auto;
+    margin: 40px 0;
+    padding: 10px 0;
+    background: linear-gradient(to right, #f8f9fa 30%, rgba(255,255,255,0) 0%),
+                linear-gradient(to right, rgba(255,255,255,0) 0%, #f8f9fa 70%);
+    background-position: 0 0, 100% 0;
+    background-repeat: no-repeat;
+    background-color: #fff;
+    background-size: 20px 100%, 20px 100%;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+}
+
+.tab::-webkit-scrollbar {
+    height: 8px;
+}
+
+.tab::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 4px;
+}
+
+.tab::-webkit-scrollbar-thumb {
+    background: #888;
+    border-radius: 4px;
+}
+
+.tab::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
+
+.tab table {
+    width: 100%;
+    min-width: 800px;
+    border-collapse: collapse;
+    margin: 0 auto;
+    font-size: 0.9rem;
+}
+
+.tab caption {
+    caption-side: top;
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+    text-align: center;
+    color: #333;
+}
+
+.tab thead {
+    background-color: #4a6fa5;
+    color: white;
+}
+
+.tab th, .tab td {
+    padding: 12px 15px;
+    text-align: center;
+    border: 1px solid #ddd;
+}
+
+.tab th {
+    font-weight: 600;
+    background-color: #4a6fa5;
+    position: sticky;
+    left: 0;
+}
+
+.tab tbody tr:nth-child(even) {
+    background-color: #f8f9fa;
+}
+
+.tab tbody tr:hover {
+    background-color: #e9ecef;
+    transition: background-color 0.3s ease;
+}
+
+.tab tbody td:first-child {
+    font-weight: 600;
+    background-color: #eef2f7;
+}
+
+.tab td[colspan="2"],
+.tab td[colspan="4"] {
+    background-color: #f0f7ff;
+    font-weight: 500;
+}
+
+.tab th[rowspan] {
+    background-color: #3a5a8c;
+    vertical-align: middle;
+}
+
+@media (max-width: 768px) {
+    .tab table {
+        min-width: 700px;
+        font-size: 0.85rem;
+    }
+    
+    .tab th, .tab td {
+        padding: 10px 12px;
+    }
+    
+    .tab caption h2 {
+        font-size: 1.3rem;
+    }
+}
+
+@media (max-width: 1024px) {
+    .tab {
+        position: relative;
+    }
+    
+    .tab::after {
+        content: "← Faites défiler →";
+        position: absolute;
+        top: -25px;
+        right: 10px;
+        font-size: 0.8rem;
+        color: #666;
+        font-style: italic;
+    }
+}
+
+
+/* ===== ZONE DE BAS DE PAGE ===== */
+footer {
+    background-color: #2c3e50;
+    color: white;
+    padding: 2rem;
+    margin-top: 2rem;
+}
+
+.footer-content {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+.footer-info h3 {
+    color: #ecf0f1;
+    border-bottom: 1px solid #4a6491;
+    padding-bottom: 0.5rem;
+    margin-bottom: 1rem;
+}
+
+.footer-info strong {
+    color: white;
+}
+
+.footer-details {
+    background-color: rgba(255, 255, 255, 0.1);
+    padding: 1.5rem;
+    border-radius: 8px;
+}
+
+.footer-details p {
+    margin-bottom: 0.8rem;
+    text-align: left;
+    text-align: center;
+}
+
+.footer-details strong {
+    color: white;
+}
+
+.e-lmd, .portfolio {
+    color: #92acff;
+    text-decoration: none;
+}
+
+.portfolio {
+    text-decoration: underline;
+}
+
+.e-lmd:hover {
+    text-decoration: underline;
+}
+
+.copyright {
+    margin-top: 1.5rem;
+    padding-top: 1rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
+    font-size: 0.9rem;
+    color: #bdc3c7;
+}
+
+/* ===== RESPONSIVE DESIGN ===== */
+@media (max-width: 768px) {
+    body {
+        padding: 10px;
+    }
+    
+    header h1 {
+        font-size: 1.8rem;
+    }
+    
+    h2 {
+        font-size: 1.5rem;
+    }
+    
+    main, header, footer {
+        padding: 1.5rem;
+    }
+    
+    .tech-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .footer-content {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 480px) {
+    header h1 {
+        font-size: 1.5rem;
+    }
+    
+    .logo {
+        width: 60px;
+        height: 60px;
+    }
+    
+    .external-link a {
+        display: block;
+        text-align: center;
+        padding: 0.6rem;
+    }
+}
